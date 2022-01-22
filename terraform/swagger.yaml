@@ -1,0 +1,65 @@
+swagger: '2.0'
+info:
+  version: '1.0'
+  title: "Contact"
+schemes:
+  - https
+paths:
+  "/contacts":
+    get:
+      description: "Get contacts"
+      produces:
+        - application/json
+      responses:
+        200:
+          description: "The codingtips request successful."
+          schema:
+            type: array
+            items:
+              $ref: "#/definitions/Contacts"
+      x-amazon-apigateway-integration:
+        uri: ${get_lambda_arn}
+        passthroughBehavior: "when_no_match"
+        httpMethod: "POST"
+        type: "aws_proxy"
+    post:
+      description: "post a contact"
+      consumes:
+        - application/json
+      responses:
+        200:
+          description: "The contact was added successfully"
+      x-amazon-apigateway-integration:
+        uri: ${post_lambda_arn}
+        passthroughBehavior: "when_no_match"
+        httpMethod: "POST"
+        type: "aws_proxy"
+
+definitions:
+  Contacts:
+    type: object
+    description: "A coding tip"
+    properties:
+      contact_id:
+        type: string
+        description: "contact contact_id"
+      name:
+        type: string
+        description: "contact name"
+      phones:
+        type: string
+        description: "contact phone"
+      dob:
+        type: string
+        description: "contact dob"
+      emails:
+        type: string
+        description: "contact email"
+      primary_phone:
+        type: string
+        description: "contact primary_phone"
+      primary_email:
+        type: string
+        description: "contact primary_email"
+    required:
+      - name

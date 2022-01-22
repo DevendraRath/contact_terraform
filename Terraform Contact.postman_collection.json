@@ -1,0 +1,64 @@
+{
+	"info": {
+		"_postman_id": "b5a0f5ac-8f09-482c-8774-41a35d958f75",
+		"name": "Terraform Contact",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Get contact",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "https://tosfqtc9la.execute-api.us-east-2.amazonaws.com/default/contacts",
+					"protocol": "https",
+					"host": [
+						"tosfqtc9la",
+						"execute-api",
+						"us-east-2",
+						"amazonaws",
+						"com"
+					],
+					"path": [
+						"default",
+						"contacts"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Post contact",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"contact_id\": \"1\",\r\n  \"name\": \"test1\",\r\n  \"phones\": [\r\n    \"7767898709\",\r\n    \"7459059889\"\r\n  ],\r\n  \"dob\": \"26-06-1992\",\r\n  \"emails\": [\r\n    \"test1@gmail.com\",\r\n    \"test2@gmail.com\"\r\n  ],\r\n  \"primary_phone\": \"test1@gmail.com\",\r\n  \"primary_email\": \"7767898709\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://tosfqtc9la.execute-api.us-east-2.amazonaws.com/default/contacts",
+					"protocol": "https",
+					"host": [
+						"tosfqtc9la",
+						"execute-api",
+						"us-east-2",
+						"amazonaws",
+						"com"
+					],
+					"path": [
+						"default",
+						"contacts"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
