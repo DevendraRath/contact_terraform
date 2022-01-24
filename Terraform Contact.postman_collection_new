@@ -11,10 +11,10 @@
 				"method": "GET",
 				"header": [],
 				"url": {
-					"raw": "https://tosfqtc9la.execute-api.us-east-2.amazonaws.com/default/contacts",
+					"raw": "https://b0javqxyhl.execute-api.us-east-2.amazonaws.com/default/contacts",
 					"protocol": "https",
 					"host": [
-						"tosfqtc9la",
+						"b0javqxyhl",
 						"execute-api",
 						"us-east-2",
 						"amazonaws",
@@ -35,7 +35,7 @@
 				"header": [],
 				"body": {
 					"mode": "raw",
-					"raw": "{\r\n  \"contact_id\": \"1\",\r\n  \"name\": \"test1\",\r\n  \"phones\": [\r\n    \"7767898709\",\r\n    \"7459059889\"\r\n  ],\r\n  \"dob\": \"26-06-1992\",\r\n  \"emails\": [\r\n    \"test1@gmail.com\",\r\n    \"test2@gmail.com\"\r\n  ],\r\n  \"primary_phone\": \"test1@gmail.com\",\r\n  \"primary_email\": \"7767898709\"\r\n}",
+					"raw": "{\r\n  \"contact_id\": \"3\",\r\n  \"name\": \"test3\",\r\n  \"phones\": [\r\n    \"7767898709\",\r\n    \"7459059889\"\r\n  ],\r\n  \"dob\": \"26-06-1992\",\r\n  \"emails\": [\r\n    \"test3@gmail.com\",\r\n    \"test3@gmail.com\"\r\n  ],\r\n  \"primary_phone\": \"test3@gmail.com\",\r\n  \"primary_email\": \"7767898709\"\r\n}",
 					"options": {
 						"raw": {
 							"language": "json"
@@ -43,10 +43,10 @@
 					}
 				},
 				"url": {
-					"raw": "https://tosfqtc9la.execute-api.us-east-2.amazonaws.com/default/contacts",
+					"raw": "https://b0javqxyhl.execute-api.us-east-2.amazonaws.com/default/contacts",
 					"protocol": "https",
 					"host": [
-						"tosfqtc9la",
+						"b0javqxyhl",
 						"execute-api",
 						"us-east-2",
 						"amazonaws",
