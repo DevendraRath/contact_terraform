@@ -6,7 +6,7 @@ resource "aws_lambda_function" "post-contacts-lambda" {
 
   handler     = "index.handler"
   runtime     = "nodejs14.x"
-  memory_size = 128
+  memory_size = 256
 
   role = aws_iam_role.lambda-iam-role.arn
 }

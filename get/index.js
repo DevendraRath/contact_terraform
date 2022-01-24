@@ -6,14 +6,11 @@ const docClient = new AWS.DynamoDB.DocumentClient({region: 'us-east-2'});
 exports.handler = function(event, context, callback) {
   console.log('processing the following event`: %j', event);
 
-
   let scanningParameters = {
     TableName: 'contact_table',
     Limit: 100 //maximum result of 100 items
   };
 
-
-//In dynamoDB scan looks through your entire table and fetches all data
   docClient.scan(scanningParameters, function (err, data) {
     if (err) {
       callback(err, null);
