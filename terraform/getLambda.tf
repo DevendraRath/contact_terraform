@@ -1,8 +1,8 @@
-resource "aws_lambda_function" "get-contact-lambda" {
-  function_name = "contact-get"
+resource "aws_lambda_function" "get-contact-lambda-new" {
+  function_name = "contact-get-new"
 
   s3_bucket = var.s3_bucket
-  s3_key    = "v${var.lambda_version}/getLambda.zip"
+  s3_key    = "getLambda.zip"
 
   handler     = "index.handler"
   runtime     = "nodejs14.x"
@@ -14,9 +14,9 @@ resource "aws_lambda_function" "get-contact-lambda" {
 resource "aws_lambda_permission" "api-gateway-invoke-get-lambda" {
   statement_id  = "AllowAPIGatewayInvoke"
   action        = "lambda:InvokeFunction"
-  function_name = aws_lambda_function.get-contact-lambda.arn
+  function_name = aws_lambda_function.get-contact-lambda-new.arn
   principal     = "apigateway.amazonaws.com"
 
-  source_arn = "${aws_api_gateway_deployment.contact-api-gateway-deployment.execution_arn}/*/*"
+  source_arn = "${aws_api_gateway_deployment.contact-api-gateway-deployment-new.execution_arn}/*/*"
 }
 

@@ -1,20 +1,20 @@
 {
 	"info": {
-		"_postman_id": "b5a0f5ac-8f09-482c-8774-41a35d958f75",
-		"name": "Terraform Contact",
+		"_postman_id": "878faba3-f55e-4cf4-b242-10c4072b74d6",
+		"name": "terraform contact new",
 		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
 	},
 	"item": [
 		{
-			"name": "Get contact",
+			"name": "Get Contacts",
 			"request": {
 				"method": "GET",
 				"header": [],
 				"url": {
-					"raw": "https://b0javqxyhl.execute-api.us-east-2.amazonaws.com/default/contacts",
+					"raw": "https://5tk4r6wif7.execute-api.us-east-2.amazonaws.com/default/contacts",
 					"protocol": "https",
 					"host": [
-						"b0javqxyhl",
+						"5tk4r6wif7",
 						"execute-api",
 						"us-east-2",
 						"amazonaws",
@@ -35,7 +35,7 @@
 				"header": [],
 				"body": {
 					"mode": "raw",
-					"raw": "{\r\n  \"contact_id\": \"3\",\r\n  \"name\": \"test3\",\r\n  \"phones\": [\r\n    \"7767898709\",\r\n    \"7459059889\"\r\n  ],\r\n  \"dob\": \"26-06-1992\",\r\n  \"emails\": [\r\n    \"test3@gmail.com\",\r\n    \"test3@gmail.com\"\r\n  ],\r\n  \"primary_phone\": \"test3@gmail.com\",\r\n  \"primary_email\": \"7767898709\"\r\n}",
+					"raw": "{\r\n         \"contact_id\" : \"2\",\r\n         \"name\": \"test2\",\r\n            \"dob\": \"21-09-1992\",\r\n            \"phones\": [\"1234567859\", \"7876567657\"],\r\n            \"emails\": [\"test3@gmail.com\", \"test4@gmail.com\"],\r\n            \"primary_phone\": \"1234567859\",\r\n            \"primary_email\": \"test3@gmail.com\"\r\n}",
 					"options": {
 						"raw": {
 							"language": "json"
@@ -43,10 +43,10 @@
 					}
 				},
 				"url": {
-					"raw": "https://b0javqxyhl.execute-api.us-east-2.amazonaws.com/default/contacts",
+					"raw": "https://5tk4r6wif7.execute-api.us-east-2.amazonaws.com/default/contacts",
 					"protocol": "https",
 					"host": [
-						"b0javqxyhl",
+						"5tk4r6wif7",
 						"execute-api",
 						"us-east-2",
 						"amazonaws",

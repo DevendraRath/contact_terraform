@@ -12,7 +12,7 @@ exports.handler = function (event, context, callback) {
  
   let params = {
     Item: data,
-    TableName: "contact_table",
+    TableName: "contact_table_new",
   };
 
   docClient.put(params, function (err, data) {

@@ -7,7 +7,7 @@ exports.handler = function(event, context, callback) {
   console.log('processing the following event`: %j', event);
 
   let scanningParameters = {
-    TableName: 'contact_table',
+    TableName: 'contact_table_new',
     Limit: 100 //maximum result of 100 items
   };
 

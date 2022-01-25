@@ -32,9 +32,15 @@ resource "aws_iam_role_policy" "dynamodb-lambda-policy"{
     {
       "Effect": "Allow",
       "Action": [
-        "dynamodb:*"
+        "dynamodb:BatchGetItem",
+				"dynamodb:GetItem",
+				"dynamodb:Query",
+				"dynamodb:Scan",
+				"dynamodb:BatchWriteItem",
+				"dynamodb:PutItem",
+				"dynamodb:UpdateItem"
       ],
-      "Resource": "${aws_dynamodb_table.contact-dynamodb-table.arn}"
+      "Resource": "${aws_dynamodb_table.contact-dynamodb-table_new.arn}"
     }
   ]
 }
